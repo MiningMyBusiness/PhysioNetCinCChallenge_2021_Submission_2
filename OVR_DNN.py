@@ -35,7 +35,7 @@ class OVR_DNN:
         self.split_data()
         estimators = self.get_models()
         first_one = True
-        feat_imp_sums = np.zeros(X_train.shape[1])
+        feat_imp_sums = np.zeros(self._X_train.shape[1])
         for pair in estimators:
             print('Training base model', pair[0])
             pair[1].fit(self._X_train, self._y_train)
